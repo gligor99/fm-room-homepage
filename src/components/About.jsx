@@ -5,10 +5,10 @@ const About = () => {
     <section className="about">
       <div className="about__left"></div>
       <div className="about__middle">
-          <h1 className="about__middle_heading">
-              About our furniture
-          </h1>
-          <p className="about__middle_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex pariatur quia eligendi eos veritatis non ea? Facere illum quas odio quis, commodi aliquid quam esse voluptatem temporibus expedita repellat earum, pariatur fuga quaerat, officia dignissimos?</p>
+        <h1 className="about__middle_heading">About our furniture</h1>
+        <p className="about__middle_paragraph">
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus expedita explicabo perferendis. Suscipit, veritatis placeat facilis illum perferendis voluptates earum omnis ex sapiente quis consequatur et nihil dignissimos maxime. Rerum, dolores? Quas minima nemo debitis praesentium corrupti ipsum atque. Doloremque explicabo nostrum totam quisquam. Nemo consequatur at modi quos quibusdam?
+        </p>
       </div>
       <div className="about__right"></div>
     </section>
