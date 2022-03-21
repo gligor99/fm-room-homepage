@@ -1,4 +1,4 @@
-.nav__container {
+.nav {
   position: absolute;
   width: 80%;
   height: 4rem;
@@ -45,7 +45,7 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .nav__container {
+  .nav {
     width: 80%;
     display: flex;
     justify-content: flex-start;
@@ -153,7 +153,74 @@
   cursor: pointer;
 }
 
-.slider-btn-icon {
+.slider-btn__icon {
   height: 2rem;
   width: 2rem;
+}
+
+@media only screen and (max-width: 1480px) {
+  .slider__right-section__content {
+    padding: 3rem;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .slider__right-section__content {
+    padding: 3rem;
+  }
+
+  .slider__right-section__content-heading {
+    font-size: 3rem;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .slider__right-section__content {
+    padding: 2rem;
+  }
+
+  .slider__right-section__content-heading {
+    font-size: 2.5rem;
+    line-height: 1.15;
+  }
+}
+
+.about {
+  height: 30vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.about__left {
+  flex: 1;
+  background-image: url("./images/image-about-dark.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about__middle {
+  flex: 1;
+  padding: 3rem;
+  align-self: center;
+}
+
+.about__middle_heading {
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.about__middle_paragraph {
+  color: gray;
+  font-size: 1.2rem;
+}
+
+.about__right {
+  flex: 1;
+  background-image: url("./images/image-about-light.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

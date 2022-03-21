@@ -32,10 +32,10 @@ const Slider = () => {
           </div>
           <div className="slider__right-section__slider-btn">
             <button className="slider-btn">
-              <FaAngleLeft className="slider-btn-icon" />
+              <FaAngleLeft className="slider-btn__icon" />
             </button>
             <button className="slider-btn">
-              <FaAngleRight className="slider-btn-icon" />
+              <FaAngleRight className="slider-btn__icon" />
             </button>
           </div>
         </div>

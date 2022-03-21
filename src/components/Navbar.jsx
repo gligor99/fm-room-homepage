@@ -4,7 +4,7 @@ import burger from "../images/icon-hamburger.svg";
 
 const Navbar = () => {
   return (
-    <nav className="nav__container">
+    <nav className="nav">
       <div className="nav__toggle">
         <img src={burger} alt="Navbar Toggle Icon" />
       </div>
