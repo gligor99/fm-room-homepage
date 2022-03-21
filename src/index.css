@@ -45,8 +45,4 @@ body {
   min-height: 100vh; 
 }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+
