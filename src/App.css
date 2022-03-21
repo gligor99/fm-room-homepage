@@ -79,10 +79,81 @@
 
 .slider__left-section {
   width: 60vw;
-  background-color: blue;
+  background: url("./images/desktop-image-hero-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .slider__right-section {
+  position: relative;
   width: 40vw;
-  background-color: chartreuse;
+  background-color: white;
+}
+
+.slider__right-section__content {
+  height: 100%;
+  display: flex;
+  padding: 7rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.slider__right-section__content-heading {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.1px;
+  margin-bottom: 2rem;
+}
+
+.slider__right-section__content-paragraph {
+  font-size: 1.2rem;
+  color: gray;
+  margin-bottom: 2rem;
+}
+
+.slider__right-section__btn {
+  display: flex;
+  border: none;
+  background-color: transparent;
+  font-size: 1.6rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.slider__right-section__btn:hover {
+  transform: translateX(1rem);
+}
+
+.slider__right-section__slider-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+
+.slider-btn {
+  border: none;
+  width: 6rem;
+  height: 6rem;
+  background-color: black;
+  color: gray;
+  transition: 0.2 ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-btn:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.slider-btn-icon {
+  height: 2rem;
+  width: 2rem;
 }

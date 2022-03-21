@@ -1,5 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 const Slider = () => {
   return (
@@ -9,23 +11,32 @@ const Slider = () => {
         <div className="slider__left-section"></div>
         <div className="slider__right-section">
           <div className="slider__right-section__content">
-            <h1>Discover innovative ways to decorate</h1>
-            <p>
+            <h1 className="slider__right-section__content-heading">
+              Discover innovative ways to decorate
+            </h1>
+            <p className="slider__right-section__content-paragraph">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repudiandae iusto, assumenda porro nemo eveniet, accusamus
-              accusantium autem debitis maiores amet, ea explicabo at placeat
-              obcaecati magni ab sequi mollitia ipsa. Quod ea exercitationem
-              vero in aspernatur nisi laudantium excepturi? Suscipit maiores
-              explicabo distinctio consectetur alias! Hic saepe voluptas, beatae
-              amet nemo molestias ea omnis architecto quis impedit neque dolorum
-              molestiae sequi in dolores porro. Autem rerum omnis suscipit minus
-              reprehenderit neque quam natus tempore? Iste?
+              Repellendus, aperiam ex, laboriosam aspernatur explicabo similique
+              aliquam cum accusantium est quia, corporis suscipit a quidem
+              labore esse impedit obcaecati iste. In cumque dolores nihil
+              mollitia voluptatem perspiciatis, fuga repellat. Beatae veniam
+              deserunt laborum unde doloribus, omnis distinctio eum sed soluta
+              ex.
             </p>
-            <button>Shop now</button>
+            <button className="slider__right-section__btn">
+              Shop now{" "}
+              <span className="arrow">
+                <HiOutlineArrowNarrowRight />
+              </span>
+            </button>
           </div>
           <div className="slider__right-section__slider-btn">
-            <button>Levo</button>
-            <button>Desno</button>
+            <button className="slider-btn">
+              <FaAngleLeft className="slider-btn-icon" />
+            </button>
+            <button className="slider-btn">
+              <FaAngleRight className="slider-btn-icon" />
+            </button>
           </div>
         </div>
       </section>
