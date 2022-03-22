@@ -1,7 +1,7 @@
 .nav {
   position: absolute;
   width: 80%;
-  height: 4rem;
+  height: 5rem;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -25,10 +25,12 @@
 }
 
 .nav__link {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   cursor: pointer;
   border-bottom: 2px solid transparent;
+  border-width: 2rem;
   transition: 0.2s ease-out;
+  padding: 0;
 }
 
 .nav__link:not(:last-child) {
@@ -36,7 +38,7 @@
 }
 
 .nav__link:hover {
-  padding: 0.2rem 0.5rem;
+  border-radius: 0;
   border-bottom: 2px solid white;
 }
 
@@ -79,10 +81,13 @@
 
 .slider__left-section {
   width: 60vw;
-  background: url("./images/desktop-image-hero-1.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  height: 100%;
+}
+
+.slider__left-section__image {
+  width: 100%; /* or any custom size */
+  height: 100%;
+  object-fit: cover;
 }
 
 .slider__right-section {
@@ -98,6 +103,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
 }
 
 .slider__right-section__content-heading {
@@ -109,7 +115,7 @@
 }
 
 .slider__right-section__content-paragraph {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: gray;
   margin-bottom: 2rem;
 }
@@ -134,12 +140,13 @@
   bottom: 0;
   left: 0;
   display: flex;
+  justify-content: start;
 }
 
 .slider-btn {
   border: none;
-  width: 8.5vh;
-  height: 8.5vh;
+  width: 10.6vh;
+  height: 10.6vh;
   background-color: black;
   color: gray;
   display: flex;
@@ -148,13 +155,12 @@
 }
 
 .slider-btn:hover {
-  opacity: 0.8;
+  background-color: gray;
   cursor: pointer;
 }
 
 .slider-btn__icon {
-  height: 2rem;
-  width: 2rem;
+  height: 4rem;
 }
 
 @media only screen and (max-width: 1480px) {
@@ -195,7 +201,7 @@
 
   .slider__left-section {
     height: 100%;
-    width: 100%;
+    width: 100vw;
     background: url("./images/desktop-image-hero-1.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -205,7 +211,7 @@
   .slider__right-section {
     position: relative;
     height: 100%;
-    width: 100%;
+    width: 100vw;
     background-color: white;
   }
 
@@ -255,19 +261,20 @@
 }
 
 .about__middle {
-  flex: 1;
-  padding: 3rem;
+  flex: 1.12;
+  padding: 3rem 5rem;
   align-self: center;
 }
 
 .about__middle_heading {
   text-transform: uppercase;
   margin-bottom: 1.5rem;
+  letter-spacing: 1.5px;
 }
 
 .about__middle_paragraph {
   color: gray;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .about__right {
@@ -319,3 +326,4 @@
     background-size: cover;
   }
 }
+

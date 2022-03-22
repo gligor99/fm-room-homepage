@@ -1,5 +1,7 @@
 import React from "react";
 import logo from "../images/logo.svg";
+
+// Icons
 import burger from "../images/icon-hamburger.svg";
 
 const Navbar = () => {

@@ -7,7 +7,12 @@ const About = () => {
       <div className="about__middle">
         <h1 className="about__middle_heading">About our furniture</h1>
         <p className="about__middle_paragraph">
-         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus expedita explicabo perferendis. Suscipit, veritatis placeat facilis illum perferendis voluptates earum omnis ex sapiente quis consequatur et nihil dignissimos maxime. Rerum, dolores? Quas minima nemo debitis praesentium corrupti ipsum atque. Doloremque explicabo nostrum totam quisquam. Nemo consequatur at modi quos quibusdam?
+          Our multifunctional collection blends design and function to suit your
+          individual taste. Make each room unique, or pick a cohesive theme that
+          best express your interests and what inspires you. Find the furniture
+          pieces you need, from traditional to contemporary styles or anything
+          in between. Product specialists are available to help you create your
+          dream space.
         </p>
       </div>
       <div className="about__right"></div>
