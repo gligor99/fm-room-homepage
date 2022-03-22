@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 // Data
 import sliderData from "../data";
 // Components
@@ -9,68 +9,69 @@ import leftArrow from "../images/icon-angle-left.svg";
 import rightArrow from "../images/icon-angle-right.svg";
 import iconArrow from "../images/icon-arrow.svg";
 
-import { Fade } from "react-reveal";
-
 const Slider = () => {
-  const [data, setData] = useState(sliderData[0]);
+  const [data] = useState(sliderData);
+  const [index, setIndex] = useState(0);
 
-  console.log(data.id);
-  const handleClick = (id) => {
-    if (id > 2) {
-      const newData = sliderData[0];
-      setData(newData);
+  const prevSlide = () => {
+    if (index !== 0) {
+      setIndex((index) => index - 1);
     } else {
-      const newData = sliderData[id];
-      setData(newData);
+      setIndex(2);
+    }
+  };
+
+  const nextSlide = () => {
+    if (index !== data.length - 1) {
+      setIndex((index) => index + 1);
+    } else {
+      setIndex(0);
     }
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      handleClick(data.id);
-    }, 5000);
-  }, [data]);
+    const slider = setTimeout(nextSlide, 3000);
+
+    return function () {
+      clearTimeout(slider);
+    };
+    
+  }, [index]);
 
   return (
     <>
       <Navbar />
       <section className="slider">
-          <div className="slider__left-section">
-            <img
-              className="slider__left-section__image"
-              src={data.image}
-              alt={data.title}
-            />
-          </div>
+        <div className="slider__left-section">
+          <img
+            className="slider__left-section__image"
+            src={data[index].image}
+            alt={data[index].title}
+          />
+        </div>
         <div className="slider__right-section">
-            <div className="slider__right-section__content">
-              <h1 className="slider__right-section__content-heading">
-                {data.title}
-              </h1>
-              <p className="slider__right-section__content-paragraph">
-                {data.desc}
-              </p>
-              <button className="slider__right-section__btn">
-                Shop now
-                <span className="arrow">
-                  <img src={iconArrow} alt="IconArrow Shop button" />
-                </span>
-              </button>
-            </div>
-            <div className="slider__right-section__slider-btn">
-              <button
-                className="slider-btn"
-                onClick={() => handleClick(data.id)}
-              >
-                <img src={leftArrow} alt="LeftArrow Slider" />
-              </button>
-              <button
-                className="slider-btn"
-                onClick={() => handleClick(data.id)}
-              >
-                <img src={rightArrow} alt="RightArrow Slider" />
-              </button>
-            </div>
+          <div className="slider__right-section__content">
+            <h1 className="slider__right-section__content-heading">
+              {data[index].title}
+            </h1>
+            <p className="slider__right-section__content-paragraph">
+              {data[index].desc}
+            </p>
+            <button className="slider__right-section__btn">
+              Shop now
+              <span className="arrow">
+                <img src={iconArrow} alt="IconArrow Shop button" />
+              </span>
+            </button>
+          </div>
+          <div className="slider__right-section__slider-btn">
+            <button className="slider-btn" onClick={prevSlide}>
+              <img src={leftArrow} alt="LeftArrow Slider" />
+            </button>
+            <button className="slider-btn" onClick={nextSlide}>
+              <img src={rightArrow} alt="RightArrow Slider" />
+            </button>
+          </div>
         </div>
       </section>
     </>
