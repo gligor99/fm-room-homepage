@@ -7,6 +7,7 @@ import Navbar from "./Navbar";
 import leftArrow from "../images/icon-angle-left.svg";
 import rightArrow from "../images/icon-angle-right.svg";
 import iconArrow from "../images/icon-arrow.svg";
+import { Fade } from "react-reveal";
 
 const Slider = () => {
   const [data] = useState(sliderData);

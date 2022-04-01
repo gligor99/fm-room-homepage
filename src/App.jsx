@@ -3,16 +3,20 @@ import React from "react";
 import "./scss/main.scss";
 import About from "./components/About";
 import Slider from "./components/Slider";
+import { Fade } from "react-reveal";
 
 const App = () => {
   return (
     <section className="container">
-      <Slider />
-      <About />
+      <Fade left>
+        <Slider />
+      </Fade>
+      <Fade top>
+        <About />
+      </Fade>
     </section>
   );
 };
 
-// Adjust CSS more ...
 
 export default App;

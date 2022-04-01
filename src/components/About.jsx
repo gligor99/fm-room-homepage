@@ -4,12 +4,12 @@ const About = () => {
   return (
     <section className="about">
       <div className="about__container">
-        <div class="about__image-section">
-          <div class="about__bg--1"></div>
+        <div className="about__image-section">
+          <div className="about__bg--1"></div>
         </div>
-        <section class="about__info">
-          <h2 class="about__heading">About our furniture</h2>
-          <p class="about__text">
+        <section className="about__info">
+          <h2 className="about__heading">About our furniture</h2>
+          <p className="about__text">
             Our multifunctional collection blends design and function to suit
             your individual taste. Make each room unique, or pick a cohesive
             theme that best express your interests and what inspires you. Find
@@ -18,8 +18,8 @@ const About = () => {
             help you create your dream space.
           </p>
         </section>
-        <div class="about__image-section">
-          <div class="about__bg--2"></div>
+        <div className="about__image-section">
+          <div className="about__bg--2"></div>
         </div>
       </div>
     </section>
