@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef } from "react";
 import sliderData from "../data";
 // Components
 import Navbar from "./Navbar";
-
 // Icons
 import leftArrow from "../images/icon-angle-left.svg";
 import rightArrow from "../images/icon-angle-right.svg";
@@ -30,12 +29,10 @@ const Slider = () => {
   };
 
   useEffect(() => {
-    const slider = setTimeout(nextSlide, 3000);
-
+    const slider = setTimeout(nextSlide, 7000);
     return function () {
       clearTimeout(slider);
     };
-    
   }, [index]);
 
   return (
@@ -49,6 +46,7 @@ const Slider = () => {
             alt={data[index].title}
           />
         </div>
+
         <div className="slider__right-section">
           <div className="slider__right-section__content">
             <h1 className="slider__right-section__content-heading">
@@ -59,7 +57,7 @@ const Slider = () => {
             </p>
             <button className="slider__right-section__btn">
               Shop now
-              <span className="arrow">
+              <span className="slider__right-section__btn-arrow">
                 <img src={iconArrow} alt="IconArrow Shop button" />
               </span>
             </button>

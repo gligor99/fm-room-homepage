@@ -1,0 +1,190 @@
+.nav {
+    position: absolute;
+    width: 80%;
+    height: 5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 3rem 5rem;
+    z-index: 1;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        margin-right: 7rem;
+    }
+
+    &__img {
+        width: 100%;
+        height: 1.5rem;
+    }
+
+    &__items {
+        color: $clr-white;
+    }
+
+    &__link {
+        font-size: 1.6rem;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        transition: 0.2s ease-out;
+        padding: 0;
+
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+
+        &:hover {
+            color: $clr-gray-dark;
+            border-bottom: 2px solid $clr-white;
+        }
+    }
+
+    &__toggle {
+        display: none;
+    }
+}
+
+.slider {
+    height: 67vh;
+    display: flex;
+    justify-content: center;
+
+    &__left-section {
+        width: 60%;
+        height: 100%;
+
+        &__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__right-section {
+        position: relative;
+        width: 40%;
+        background-color: $clr-white;
+
+        &__content {
+            height: 100%;
+            padding: 7.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            &-heading {
+                font-size: 4.125rem;
+                font-weight: 600;
+                line-height: 1.25;
+                letter-spacing: 0.5rem;
+                margin-bottom: 2.5rem;
+            }
+
+            &-paragraph {
+                font-size: 1.6rem;
+                color: $clr-gray-dark;
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        &__btn {
+            display: flex;
+            border: none;
+            background-color: transparent;
+            font-size: 1.6rem;
+            letter-spacing: 1rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            }
+
+        }
+
+        &__slider-btn {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            justify-content: start;
+
+            .slider-btn {
+                border: none;
+                width: 8rem;
+                height: 8rem;
+                background-color: $clr-black;
+                color: $clr-gray-dark;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    background-color: $clr-gray-very-dark;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.about {
+    height: 33vh;
+
+    &__container {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 30% 33.5% calc(40% - 160px);
+        justify-content: space-between;
+    }
+
+    &__image-section {
+        position: relative;
+        height: unset;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        &--1 {
+            @extend .about__bg;
+            background-image: url('../images/image-about-dark.jpg');
+        }
+
+        &--2 {
+            @extend .about__bg;
+            background-image: url('../images/image-about-light.jpg');
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        padding: 7rem 0 6rem 0;
+    }
+
+    &__heading {
+        margin-bottom: 1.2rem;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+
+    &__text {
+        color: $clr-gray-dark;
+        font-size: 1.4rem;
+        line-height: 1.66rem;
+    }
+}
